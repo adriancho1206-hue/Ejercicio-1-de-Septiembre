@@ -1,0 +1,92 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body { height: 100%; }
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  color: #1e2233;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: 64px 1fr;
+  grid-template-areas:
+    "header  header"
+    "sidebar content";
+  height: 100%;
+}
+
+.topbar  { grid-area: header;  background: #c7d2fe; }
+.sidebar { grid-area: sidebar; background: #a5f3fc; }
+.content { 
+  display: flex;
+flex-direction: column;
+gap: 50px;
+  background: #f4f5fb; padding: 24px; overflow-y: auto; }
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background: #1e2233;
+  color: white;
+}
+.logo { font-weight: 800; font-size: 1.1rem; }
+.top-links { display: flex; gap: 22px; }
+.top-links a { color: #c7d2fe; text-decoration: none; font-size: .9rem; }
+a:hover {color: #f1f0fe;}
+
+.sidebar { background: #161a2c; padding: 16px; }
+.side-links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.side-links a {
+  color: #c7ccf0;
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: .9rem;
+}
+.side-links a.active { background: #6366f1; color: white; }
+
+.contenedor-tarjetas {
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 90px;
+  width: 10%;
+  
+}
+
+
+.tarjeta1 {
+border-radius: 5px;
+text-align: center;
+width: 90px;
+padding: 9px;
+background: linear-gradient(rgb(92, 191, 230), transparent)
+
+}
+
+.tarjeta2 {
+border-radius: 5px;
+text-align: center;
+width: 90px;
+padding: 9px;
+background: linear-gradient(rgb(92, 191, 230), transparent)
+
+
+}
+
+.tarjeta3 {
+
+border-radius: 5px;
+text-align: center;
+width: 90px;
+padding: 9px;
+background: linear-gradient(rgb(92, 191, 230), transparent)
+
+}
